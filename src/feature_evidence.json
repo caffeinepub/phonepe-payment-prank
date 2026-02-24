@@ -1,0 +1,25 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-checkmark-tick-icon-color-to-green-in-the-paymentsuccess-component-while-preserving-the-existing-circle-background-color",
+      "featureTitle": "Update the checkmark tick icon color to green in the PaymentSuccess component while preserving the existing circle background color",
+      "files": [
+        "frontend/src/components/PaymentSuccess.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-22"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

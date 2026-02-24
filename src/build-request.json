@@ -1,0 +1,40 @@
+{
+  "kind": "build_request",
+  "title": "Change payment success tick mark to green color",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-22",
+      "text": "Update the checkmark tick icon color to green in the PaymentSuccess component while preserving the existing circle background color",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-last"
+        ],
+        "quotes": [
+          "Yes tick icon the top, leave yhe rest as it is, just change the tick mark colir green but the entire circle background color as it is"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The tick mark/checkmark icon displays in green color",
+        "The circle background behind the tick remains unchanged from its current color",
+        "All other elements on the PaymentSuccess screen remain unchanged (logo, text, layout, purple theme)"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any other visual elements on the PaymentSuccess screen beyond the tick mark color",
+    "Preserve the existing circle background color",
+    "Keep all other components and styling unchanged"
+  ],
+  "nonGoals": [
+    "Changing the circle background color",
+    "Modifying the logo or any other branding elements",
+    "Adjusting the layout or positioning of elements",
+    "Changing text colors or content"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

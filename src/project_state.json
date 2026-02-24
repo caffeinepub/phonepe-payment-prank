@@ -1,0 +1,239 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 13,
+  "summary": "PhonePe payment prank app clone with in-app notification system featuring message composition with manual recipient name entry, audio recording, notification inbox, and flexible notification sending to any typed recipient name",
+  "architectural_notes": [
+    "Prank/simulation app - no actual payment processing or integration",
+    "UI mimics PhonePe success screen design",
+    "In-app notification system with no external SMS/push notification services",
+    "Browser-based audio recording using Web Audio API for voice messages",
+    "Recipient names are manually typed by users instead of selected from registered users",
+    "No user registration system required for notification recipients"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-payment-input-form-with-three-fields-receiver-name-text-input-receiver-phone-number-text-input-with-numeric-validation-and-payment-amount-numeric-input",
+      "title": "Create a payment input form with three fields: receiver name (text input), receiver phone number (text input with numeric validation), and payment amount (numeric input)",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-phonepe-style-successful-payment-confirmation-screen-that-displays-after-form-submission-showing-the-receiver-name-phone-number-payment-amount-transaction-timestamp-and-a-success-checkmark-animation",
+      "title": "Design a PhonePe-style successful payment confirmation screen that displays after form submission, showing the receiver name, phone number, payment amount, transaction timestamp, and a success checkmark animation",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-store-payment-details-temporarily-in-frontend-state-to-allow-users-to-view-the-success-screen-and-create-multiple-payment-confirmations-in-the-same-session",
+      "title": "Store payment details temporarily in frontend state to allow users to view the success screen and create multiple payment confirmations in the same session",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-distinctive-visual-theme-with-phonepe-inspired-purple-gradients-clean-typography-and-mobile-first-card-based-layout-that-mimics-payment-app-aesthetics",
+      "title": "Apply a distinctive visual theme with PhonePe-inspired purple gradients, clean typography, and mobile-first card-based layout that mimics payment app aesthetics",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-notification-composer-interface-where-users-can-write-text-messages-select-a-recipient-from-registered-users-and-submit-the-notification",
+      "title": "Create a notification composer interface where users can write text messages, select a recipient from registered users, and submit the notification",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-browser-based-audio-recording-using-the-web-audio-api-that-allows-users-to-record-short-audio-clips-preview-them-and-attach-them-to-notifications",
+      "title": "Implement browser-based audio recording using the Web Audio API that allows users to record short audio clips, preview them, and attach them to notifications",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-notification-inbox-interface-where-users-can-view-received-text-messages-and-play-back-audio-messages-with-playback-controls",
+      "title": "Create a notification inbox interface where users can view received text messages and play back audio messages with playback controls",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-navigation-to-allow-users-to-switch-between-the-payment-prank-features-and-the-new-notification-messaging-features-within-the-app",
+      "title": "Add navigation to allow users to switch between the payment prank features and the new notification/messaging features within the app",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-recipient-selection-dropdown-in-the-notificationcomposer-component-with-a-manual-text-input-field-that-allows-users-to-type-any-recipient-name-they-want",
+      "title": "Replace the recipient selection dropdown in the NotificationComposer component with a manual text input field that allows users to type any recipient name they want",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-useusers-hook-dependency-from-the-notificationcomposer-component-since-recipient-selection-no-longer-requires-fetching-registered-users",
+      "title": "Remove the useUsers hook dependency from the NotificationComposer component since recipient selection no longer requires fetching registered users",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-a-phonepe-inspired-logo-image-featuring-a-purple-gradient-circular-icon-with-a-stylized-payment-symbol-or-p-character-designed-to-be-recognizable-and-match-phonepe-s-branding-aesthetic",
+      "title": "Generate a PhonePe-inspired logo image featuring a purple gradient circular icon with a stylized payment symbol or 'P' character, designed to be recognizable and match PhonePe's branding aesthetic",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-existing-logo-in-the-app-tsx-header-component-with-the-new-phonepe-inspired-logo-image-ensuring-it-displays-correctly-with-appropriate-sizing-and-positioning",
+      "title": "Replace the existing logo in the App.tsx header component with the new PhonePe-inspired logo image, ensuring it displays correctly with appropriate sizing and positioning",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-new-phonepe-inspired-logo-to-the-paymentsuccess-component-displaying-it-prominently-on-the-payment-confirmation-screen",
+      "title": "Add the new PhonePe-inspired logo to the PaymentSuccess component, displaying it prominently on the payment confirmation screen",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-any-other-locations-throughout-the-app-where-a-logo-or-branding-image-appears-to-use-the-new-phonepe-inspired-logo-ensuring-consistent-branding-across-all-screens",
+      "title": "Update any other locations throughout the app where a logo or branding image appears to use the new PhonePe-inspired logo, ensuring consistent branding across all screens",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-a-new-logo-image-featuring-the-devanagari-character-in-white-color-on-a-solid-purple-background-sized-appropriately-for-use-as-an-app-logo-suggested-dimensions-200x200-pixels",
+      "title": "Generate a new logo image featuring the Devanagari character 'पे' in white color on a solid purple background, sized appropriately for use as an app logo (suggested dimensions: 200x200 pixels)",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-existing-logo-in-the-app-tsx-header-component-with-the-new-white-on-purple-background-logo-maintaining-proper-sizing-and-positioning-within-the-header",
+      "title": "Replace the existing logo in the App.tsx header component with the new white 'पे' on purple background logo, maintaining proper sizing and positioning within the header",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-logo-in-the-paymentsuccess-component-with-the-new-white-on-purple-background-logo-ensuring-it-displays-prominently-on-the-payment-confirmation-screen",
+      "title": "Replace the logo in the PaymentSuccess component with the new white 'पे' on purple background logo, ensuring it displays prominently on the payment confirmation screen",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-other-locations-throughout-the-app-where-logos-or-branding-images-appear-to-use-the-new-white-on-purple-background-logo-ensuring-consistent-branding-across-all-screens",
+      "title": "Update all other locations throughout the app where logos or branding images appear to use the new white 'पे' on purple background logo, ensuring consistent branding across all screens",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-checkmark-tick-icon-color-to-green-in-the-paymentsuccess-component-while-preserving-the-existing-circle-background-color",
+      "title": "Update the checkmark tick icon color to green in the PaymentSuccess component while preserving the existing circle background color",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create PhonePe-like payment success interface",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add input fields for receiver name, number, and payment amount",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add in-app notification composer with message form and recipient selection",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Implement browser-based audio message recorder using Web Audio API",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Create notification inbox for viewing text messages and playing back audio messages",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Implement backend storage for text and audio notifications with sender, recipient, message content, audio data (as blob or base64), timestamp, and read status",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Replace recipient dropdown with manual text input field in notification composer",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Update the backend notification storage to accept and store manually-typed recipient names as strings instead of requiring Principal IDs from registered users",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Replace all existing logos with white 'पे' (Devanagari Pe) text on purple background",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Change payment success checkmark tick color to green while keeping circle background unchanged",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "PhonePe Payment Prank",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
