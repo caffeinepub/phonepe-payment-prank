@@ -2,7 +2,7 @@
   "frontend/src/App.tsx": "Main application component with QueryClient and InternetIdentity providers, navigation between payments and notifications sections, and header with new \"पे\" logo and login button.",
   "frontend/src/pages/PaymentPage.tsx": "Payment page component managing payment form and success screen state with transaction generation.",
   "frontend/src/components/PaymentForm.tsx": "Payment form component with three validated input fields (receiver name, phone number, amount) featuring PhonePe-inspired styling with new \"पे\" logo and comprehensive validation.",
-  "frontend/src/components/PaymentSuccess.tsx": "Payment success screen displaying PhonePe-style confirmation with animated checkmark icon (now with green tick mark) and formatted payment details.",
+  "frontend/src/components/PaymentSuccess.tsx": "Payment success screen with two-tone background (green top 1/3, white bottom 2/3), displaying payment confirmation with recipient details at top, green checkmark circle at boundary, and sender details (name, HDFC bank account, transaction ID) in lower white section.",
   "frontend/src/index.css": "Global styles with PhonePe-inspired purple color palette using OKLCH color system for both light and dark modes.",
   "frontend/tailwind.config.js": "Tailwind configuration extended with PhonePe purple color tokens (primary, secondary, accent, light, lighter) and custom design system settings.",
   "frontend/src/components/ui/button.tsx": "Reusable button component with multiple variants and sizes using class-variance-authority.",

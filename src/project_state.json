@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 13,
+  "projectStateVersion": 15,
   "summary": "PhonePe payment prank app clone with in-app notification system featuring message composition with manual recipient name entry, audio recording, notification inbox, and flexible notification sending to any typed recipient name",
   "architectural_notes": [
     "Prank/simulation app - no actual payment processing or integration",
@@ -164,6 +164,54 @@
         "REQ-22"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-paymentsuccess-component-to-display-a-two-tone-background-with-green-covering-the-top-1-3-of-the-screen-and-white-covering-the-bottom-2-3",
+      "title": "Update the PaymentSuccess component to display a two-tone background with green covering the top 1/3 of the screen and white covering the bottom 2/3",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-position-the-text-paid-to-recipient-name-at-the-top-center-of-the-white-background-section-in-the-paymentsuccess-component-where-recipient-name-is-replaced-with-the-actual-receiver-name-from-the-payment-form",
+      "title": "Position the text 'Paid to [recipient name]' at the top-center of the white background section in the PaymentSuccess component, where [recipient name] is replaced with the actual receiver name from the payment form",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-keep-the-existing-green-checkmark-tick-circle-exactly-as-it-is-in-the-paymentsuccess-component-maintaining-its-current-position-size-and-styling",
+      "title": "Keep the existing green checkmark tick circle exactly as it is in the PaymentSuccess component, maintaining its current position, size, and styling",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-paid-from-sender-name-text-field-in-the-lower-portion-of-the-white-background-area-in-the-paymentsuccess-component-where-sender-name-is-a-placeholder-or-user-entered-value",
+      "title": "Add a 'Paid from [Sender name]' text field in the lower portion of the white background area in the PaymentSuccess component, where [Sender name] is a placeholder or user-entered value",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-text-hdfc-bank-xxxx-xxxx-7128-directly-below-the-paid-from-sender-name-text-in-the-paymentsuccess-component",
+      "title": "Add the text 'HDFC Bank XXXX XXXX 7128' directly below the 'Paid from [Sender name]' text in the PaymentSuccess component",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-transaction-id-field-below-the-bank-details-in-the-paymentsuccess-component-that-allows-users-to-manually-enter-or-view-a-transaction-id",
+      "title": "Add a Transaction ID field below the bank details in the PaymentSuccess component that allows users to manually enter or view a transaction ID",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -228,6 +276,24 @@
     {
       "id": "AR-14",
       "summary": "Change payment success checkmark tick color to green while keeping circle background unchanged",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Update payment success screen with two-tone green/white background (green top 1/3, white bottom 2/3)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Add 'Paid to [recipient name]' text at top-center of white section on payment success screen",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Add sender details section in lower white area: 'Paid from [Sender name]', 'HDFC Bank XXXX XXXX 7128', and manual Transaction ID input field",
       "reqIds": [],
       "status": "pending"
     }

@@ -1,21 +1,101 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Change payment success tick mark to green color",
+  "title": "Redesign payment success screen with green/white split background and sender details",
   "requirements": [
     {
-      "id": "REQ-22",
-      "summary": "Update the checkmark tick icon color to green in the PaymentSuccess component while preserving the existing circle background color",
+      "id": "REQ-23",
+      "summary": "Update PaymentSuccess component to display a two-tone background with green covering the top 1/3 and white covering the bottom 2/3",
       "acceptanceCriteria": [
-        "The tick mark/checkmark icon displays in green color",
-        "The circle background behind the tick remains unchanged from its current color",
-        "All other elements on the PaymentSuccess screen remain unchanged (logo, text, layout, purple theme)"
+        "The top third of the PaymentSuccess screen has a green background",
+        "The bottom two-thirds of the PaymentSuccess screen has a white background",
+        "The transition between green and white sections is clean and aligned"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/PaymentSuccess.tsx",
           "operation": "modify",
-          "description": "Modify the checkmark tick icon styling to display in green color while preserving all other visual elements including the circle background color, logo, text, layout, and purple theme. Locate the checkmark/tick SVG or icon element and update its color/fill property to green (e.g., text-green-500 or fill-green-500) without modifying any parent container background colors or other styling."
+          "description": "Restructure the component layout to use a two-tone background with green (#10B981 or similar) covering the top 1/3 of the viewport and white covering the bottom 2/3. Use absolute or fixed positioning for the background sections to ensure precise 1/3 and 2/3 splits. Position the existing checkmark circle at the boundary between the green and white sections to maintain visual continuity."
+        }
+      ]
+    },
+    {
+      "id": "REQ-24",
+      "summary": "Position 'Paid to [recipient name]' text at the top-center of the white background section with dynamic recipient name from payment form",
+      "acceptanceCriteria": [
+        "The text 'Paid to [name]' appears at the top-center of the white section",
+        "The recipient name is dynamically populated from the payment form data",
+        "The text is clearly visible and properly styled"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PaymentSuccess.tsx",
+          "operation": "modify",
+          "description": "Add a 'Paid to [recipient name]' text element positioned at the top-center of the white background section, just below the green/white boundary. Use the receiverName prop passed from the payment form to dynamically populate the recipient name. Style the text with appropriate font size, weight, and color for clear visibility against the white background."
+        }
+      ]
+    },
+    {
+      "id": "REQ-25",
+      "summary": "Keep the existing green checkmark tick circle unchanged in appearance, position, and styling",
+      "acceptanceCriteria": [
+        "The green checkmark circle remains unchanged in appearance",
+        "The checkmark circle maintains its current position in the layout",
+        "No visual changes are made to the checkmark or its circle background"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PaymentSuccess.tsx",
+          "operation": "modify",
+          "description": "Preserve the existing green checkmark circle element with its current styling, size, and position. Ensure the new two-tone background layout accommodates the checkmark without requiring changes to its visual properties. Position it at or near the boundary between the green and white sections for optimal visual balance."
+        }
+      ]
+    },
+    {
+      "id": "REQ-26",
+      "summary": "Add 'Paid from [Sender name]' text field in the lower portion of the white background area",
+      "acceptanceCriteria": [
+        "The text 'Paid from [Sender name]' appears in the lower white section",
+        "The text is positioned below the 'Paid to' section and checkmark",
+        "The sender name can be displayed as a static value or from form data"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PaymentSuccess.tsx",
+          "operation": "modify",
+          "description": "Add a 'Paid from [Sender name]' text element in the lower portion of the white section, positioned below the amount and transaction details. Use a placeholder sender name or add a new prop to accept sender name from the payment form. Style consistently with other payment detail text elements."
+        }
+      ]
+    },
+    {
+      "id": "REQ-27",
+      "summary": "Add bank account details 'HDFC Bank XXXX XXXX 7128' directly below the 'Paid from [Sender name]' text",
+      "acceptanceCriteria": [
+        "The bank account details 'HDFC Bank XXXX XXXX 7128' are displayed",
+        "The text appears immediately below the 'Paid from' line",
+        "The formatting matches the visual style of other payment details"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PaymentSuccess.tsx",
+          "operation": "modify",
+          "description": "Add a text element displaying 'HDFC Bank XXXX XXXX 7128' positioned directly below the 'Paid from [Sender name]' line. Use a slightly smaller or muted text style to indicate secondary information. Maintain consistent spacing with other payment detail elements in the lower white section."
+        }
+      ]
+    },
+    {
+      "id": "REQ-28",
+      "summary": "Add a Transaction ID field below the bank details that displays or allows entry of a transaction ID",
+      "acceptanceCriteria": [
+        "A transaction ID field is displayed below the bank account details",
+        "The field shows a label indicating it is for transaction ID entry",
+        "The field is positioned in the lower portion of the white section as specified"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PaymentSuccess.tsx",
+          "operation": "modify",
+          "description": "Add a Transaction ID display field below the bank account details in the lower white section. Display the existing transaction ID that is already passed as a prop to the component. Use a label 'Transaction ID' followed by the value, styled consistently with other payment information fields. Position this as the last element in the payment details section."
         }
       ]
     }

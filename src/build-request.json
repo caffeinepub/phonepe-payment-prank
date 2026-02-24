@@ -1,37 +1,129 @@
 {
   "kind": "build_request",
-  "title": "Change payment success tick mark to green color",
+  "title": "Redesign payment success screen with green/white split background and sender details",
+  "projectName": "PhonePe Prank",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-22",
-      "text": "Update the checkmark tick icon color to green in the PaymentSuccess component while preserving the existing circle background color",
+      "id": "REQ-23",
+      "text": "Update the PaymentSuccess component to display a two-tone background with green covering the top 1/3 of the screen and white covering the bottom 2/3",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-last"
+          "msg-recent"
         ],
         "quotes": [
-          "Yes tick icon the top, leave yhe rest as it is, just change the tick mark colir green but the entire circle background color as it is"
+          "Green background from the very top to 1/3 of the upper side"
         ]
       },
       "acceptanceCriteria": [
-        "The tick mark/checkmark icon displays in green color",
-        "The circle background behind the tick remains unchanged from its current color",
-        "All other elements on the PaymentSuccess screen remain unchanged (logo, text, layout, purple theme)"
+        "The top third of the PaymentSuccess screen has a green background",
+        "The bottom two-thirds of the PaymentSuccess screen has a white background",
+        "The transition between green and white sections is clean and aligned"
+      ]
+    },
+    {
+      "id": "REQ-24",
+      "text": "Position the text 'Paid to [recipient name]' at the top-center of the white background section in the PaymentSuccess component, where [recipient name] is replaced with the actual receiver name from the payment form",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "from the white color background top center add paid to recipient name"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The text 'Paid to [name]' appears at the top-center of the white section",
+        "The recipient name is dynamically populated from the payment form data",
+        "The text is clearly visible and properly styled"
+      ]
+    },
+    {
+      "id": "REQ-25",
+      "text": "Keep the existing green checkmark tick circle exactly as it is in the PaymentSuccess component, maintaining its current position, size, and styling",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "let the tick mark circle stay as it is"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The green checkmark circle remains unchanged in appearance",
+        "The checkmark circle maintains its current position in the layout",
+        "No visual changes are made to the checkmark or its circle background"
+      ]
+    },
+    {
+      "id": "REQ-26",
+      "text": "Add a 'Paid from [Sender name]' text field in the lower portion of the white background area in the PaymentSuccess component, where [Sender name] is a placeholder or user-entered value",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "add paid from \"Sender name\""
+        ]
+      },
+      "acceptanceCriteria": [
+        "The text 'Paid from [Sender name]' appears in the lower white section",
+        "The text is positioned below the 'Paid to' section and checkmark",
+        "The sender name can be displayed as a static value or from form data"
+      ]
+    },
+    {
+      "id": "REQ-27",
+      "text": "Add the text 'HDFC Bank XXXX XXXX 7128' directly below the 'Paid from [Sender name]' text in the PaymentSuccess component",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Below that add HDFC bank XXXX XXXX 7128"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The bank account details 'HDFC Bank XXXX XXXX 7128' are displayed",
+        "The text appears immediately below the 'Paid from' line",
+        "The formatting matches the visual style of other payment details"
+      ]
+    },
+    {
+      "id": "REQ-28",
+      "text": "Add a Transaction ID field below the bank details in the PaymentSuccess component that allows users to manually enter or view a transaction ID",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Below that add transaction ID to fill Manually"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A transaction ID field is displayed below the bank account details",
+        "The field shows a label indicating it is for transaction ID entry",
+        "The field is positioned in the lower portion of the white section as specified"
       ]
     }
   ],
   "constraints": [
-    "Do not modify any other visual elements on the PaymentSuccess screen beyond the tick mark color",
-    "Preserve the existing circle background color",
-    "Keep all other components and styling unchanged"
+    "The green checkmark tick circle must remain exactly as it currently appears",
+    "The top 1/3 green and bottom 2/3 white background split must be precise",
+    "All new elements must be added to the existing PaymentSuccess component without breaking current functionality"
   ],
   "nonGoals": [
-    "Changing the circle background color",
-    "Modifying the logo or any other branding elements",
-    "Adjusting the layout or positioning of elements",
-    "Changing text colors or content"
+    "Modifying the payment form input fields",
+    "Changing the navigation or other pages",
+    "Implementing backend storage for sender name or transaction ID",
+    "Adding validation logic for the transaction ID field",
+    "Modifying the green checkmark icon color (already implemented in previous feature)"
   ],
   "imageRequirements": {
     "required": [],
